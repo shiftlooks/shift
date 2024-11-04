@@ -1,0 +1,555 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {font-size: 16px;}
+
+img { max-width: 100%;}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {background-color: black;}
+
+:root {
+    --cor-titulo1: white;
+    --cor-titulo2: black;
+    --cor-shift1: rgba(255, 0, 199, 1);
+    --cor-shift2: rgba(0, 178, 255, 1);
+    --cor-shift3: rgba(255, 245, 0, 1);
+    --cor-shift4: rgba(9, 181, 109, 1);
+    --cor-shift5: rgba(255, 153, 0, 1);
+}
+
+body, h1, h2, p, figure, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* Inicio - formatando o topo e o menu */
+.topo {
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+
+    .limitador {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {color: rgb(31, 29, 29)}
+}
+
+.limitador {
+    width: 95vw;
+    margin: auto;
+}
+
+.titulo-menu,
+h2 {
+    font-weight: normal;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.logo {
+    padding-left: 25px;
+    width: 140px;
+    object-fit: cover;
+}
+
+.links-menu {
+    display: none;
+
+    a {
+        color: rgb(31, 29, 29);
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/* Fim - formatando o topo e o menu   */
+
+
+
+/* Inicio - menu aberto da versão mobile */
+.links-menu.aberto {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-titulo1);
+
+    li:nth-child(1) {border-bottom: solid 1px var(--cor-shift2);}
+
+    li:nth-child(1) {border-top: solid 1px var(--cor-shift1);}
+
+    li:nth-child(2) {border-bottom: solid 1px var(--cor-shift5);}
+
+    li:nth-child(3) {border-bottom: solid 1px var(--cor-shift4);}
+
+    li:nth-child(4) {border-bottom: solid 1px var(--cor-shift3);}
+}
+/* Fim - menu aberto da versão mobile */
+
+
+
+/* Inicio - submenu - Oculto */
+.produtos-menu:hover {
+    position: relative;
+
+    .trico2:hover {background-color: var(--cor-shift1);}
+
+    .ecobags2:hover {background-color: var(--cor-shift2);}
+
+    .tie-dye2:hover {background-color: var(--cor-shift4);}
+
+    .croche2:hover {background-color: var(--cor-shift5);}
+
+    a:hover {transition: all .5s;}
+}
+
+.submenu {
+    position: absolute;
+    display: none;
+    padding-top: 8px;
+    width: 100%;
+    height: 207px;
+    background-color: #ffffff;
+    transition: .5s;
+}
+
+/* Exibir o submenu ao passar o mouse sobre o item "Produtos" */
+.produtos-menu:hover .submenu {
+    display: block;
+}
+/* Fim - submenu - Oculto */
+
+
+/* Inicio - formatando as fotos e a frase em destaque */
+.destaque-fotos {
+    display: flex;
+    width: 50%;
+}
+
+#terceira-imagem {display: none;}
+
+/* Formatando o bloco com a frase de detasque */
+.destaque-shift {
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+}
+/* Fim - formatando as fotos e a frase em destaque */
+
+
+
+/* Inicio - formatando as categorias */
+article, h2 {
+    color: var(--cor-titulo1);
+    text-align: center;
+}
+
+/* Formatando as linhas de separação */
+.linha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Linha categorias, queridinhos, contato e produtos */
+    .linha-separador {
+        background-color: white;
+        border: solid 1px;
+        flex: 1;
+    }
+
+    /* Linha tricô, chrochê e sobre nos */
+    .linha-separador2 {
+        background-color: white;
+        height: 2px;
+        flex: 1;
+
+    
+}}
+
+/* Inicio - formatando as categorias */
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .section {
+        width: 34%;
+        margin: auto;
+        color: rgb(31, 29, 29);
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.952);
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .trico2:hover {background-color: var(--cor-shift1);}
+
+    .ecobags2:hover {background-color: var(--cor-shift2);}
+
+    .tie-dye2:hover {background-color: var(--cor-shift4);}
+
+    .croche2:hover {background-color: var(--cor-shift5);}
+
+    .animate__animated {animation: none;}
+
+    a:hover {transition: all .4s;}
+}
+/* Fim - formatando as categorias */
+
+
+
+/* Inicio - formatando os queridinhos */
+.os-queridinhos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    figure {
+        width: 39%;
+        margin: 20px;
+    }
+
+    img {
+        height: 180px;
+        max-width: 100%;
+        border-radius: 4px;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+        transition: all .5s;
+}}
+/* Fim - formatando os queridinhos */
+
+
+
+/* Inicio - formatando a página de Crochê e Tricô */
+.croche, .trico, .ecobags, .tie-dye {
+    img {
+        height: 250px;
+        width: 250px;
+        margin: 10px;
+        border-radius: 4px;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+        transition: all .4s;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;   
+}
+/* Fim - formatando a página de Crochê e Tricô */
+
+
+/* Inicio - formatando a pagina de contatos */
+.container-2{
+    .img-contato {    
+    position: relative;
+    
+        img {
+            opacity: .5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; 
+            height: 80vh;
+            width: 100%;
+}}
+    
+    h2 {
+        color: rgb(255, 255, 255);
+        margin: 30px; 
+    }
+
+    p {font-size: 1.3rem;}
+
+    a {color: rgb(0, 0, 0);}
+
+    .contatos {
+        color: rgb(145, 63, 63);
+        background-color: rgb(255, 255, 255);
+        margin: 100px 20px 100px 20px;
+        height: 22vh;
+        padding: 50px;
+
+       p {
+        text-align: left;
+        font-size: 1rem;
+    }
+        
+        p:nth-child(1) {color: var(--cor-shift5);}
+        p:nth-child(2) {color: var(--cor-shift2);}
+        p:nth-child(3) {color: var(--cor-shift4);}
+        p:nth-child(4) {color: var(--cor-shift1);}
+}}
+/* Fim - formatando a pagina de contatos */
+
+/* Inicio - formatando a pagina sobre nós */
+.container-3 {
+    
+    .img-contato {    
+        position: relative;
+        
+        img {
+            opacity: .3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; 
+            height: 1400%;
+            width: 100%;
+        }
+    }
+
+    h2 {margin: 30px;}
+
+    p {
+        text-align: left;
+        margin: 9px;
+        font-size: 1.2rem;
+    }
+
+    P:nth-child(6){text-align: center;}
+
+    #modelo {
+        width: 40%;
+        margin-left: 10px;
+        margin-right: 10px;
+        float: left; 
+    }
+}
+/* Fim - formatando a pagina sobre nós */
+
+
+/* Inicio - formatando o footer */
+footer {
+    color: rgb(31, 29, 29);
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+
+    .logo {
+        margin: auto;
+        margin-top: 15px;
+        width: 50%;
+        object-fit: cover;
+    }
+
+    .social-media {a {padding: 4px;}}
+
+    .social-media img { max-width: 18%;}
+
+    .separador {
+        background-color: rgb(0, 0, 0);
+        width: 1px;
+    }
+
+    .sobre-nos {margin-right: 5px;}
+
+    .sobre-nos, .menu-footer, .social-media {flex: 1;}
+
+    .sobre-nos, .social-media {text-align: center;}
+
+    h3 {text-align: center;}
+
+    ul li {padding-left: 15px;}
+
+    a {color: rgb(31, 29, 29)}
+}
+/* Fim - formatando o footer */
+
+
+
+/* Ativando a animação no Mobile*/
+.animacao {
+    animation-name: aparecer;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+/* Inicio - formatando o Kayframe */
+@keyframes aparecer {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+/* Fim - formatando o Kayframe */
+
+/* Inicio - formatando os Media Query */
+@media screen and (min-width: 600px) {
+
+    /* Inicio Menu */
+    .menu>ul>li {
+        border-left: solid 2px rgb(0, 0, 0);
+        margin-bottom: 8px;
+    }
+    .menu>ul>li:last-child {border-right: solid 2px rgb(0, 0, 0);}
+
+    .logo {width: 100%;}
+
+    .titulo-menu {display: none;}
+
+    .links-menu {
+        display: flex;
+        font-size: 1.5rem;
+
+        li {width: 100%;}
+    }
+
+    .menu {width: 80%;}
+
+    .limitador {
+        height: 17vh;
+        display: flex;
+        flex-direction: column;
+        max-width: 1800px;
+    }
+    
+
+    /* Formatações gerais */
+    .animate__animated {animation: animate__pulse 2s infinite;}
+
+    /* Desativando as animações no Desktop */
+    .animacao {animation: none;}
+
+    .destaque-fotos {max-width: 33.3%;}
+
+    #terceira-imagem {display: inline;}
+
+    .destaque-shift {font-size: 1.7rem;}
+
+    .linha {h2 {margin: 30px;}}
+
+    .container {margin: 0 15% 5% 15%;}
+
+    .container-2 {
+        margin: 0 auto;
+        width: 70vw;
+        height: 90vh;
+
+        h2 {font-size: 1.6rem;}
+
+        .img-contato {    
+           
+                    
+                img {
+                    opacity: .3;
+                    height: 790%;
+                }
+        }
+            .contatos {
+                margin: 15% 30% 0 30%;
+                height: 22%;
+                padding: 50px;
+            }
+    }
+
+    .container-3 {
+        width: 80%;
+        height: 110%;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        font-family: sans-serif;
+        line-height: 150%;
+
+        p {margin: 50px;}
+
+        .img-contato {    
+            img {
+                opacity: .2;
+                height: 900%;
+            }
+        }
+
+        #modelo {width: 20%;}
+}
+
+    /* Crochê e Tricô */
+    .croche, .trico, .ecobags, .tie-dye {
+        img {
+            width: 250px;
+            height: 250px;
+            margin: 15px;
+            border-radius: 4px;
+    }}
+
+
+    /* Produtos */
+    .flex {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .flex figure {max-width: 280px;}
+
+
+    /* Queridinhos */
+    .os-queridinhos {
+        figure {width: 30%;}
+    
+        img {
+            height: 280px;
+            width: 280px;
+        }
+
+        h2 {font-size: 1.7rem;}
+    }
+
+    /* Categorias */
+    .categorias {
+        .section {
+            font-size: 1.5rem;
+            height: 90px;
+            padding: 20px;
+        }
+    }
+
+    /* Footer */
+    .rodape {
+         h3 {font-size: 1.5rem;}
+
+        .menu-footer {font-size: 1.2rem;}
+
+        p {font-size: 1.3rem;}
+
+        .logo {width: 30%;}
+}}
+
+@media screen and (min-width:1000px) {
+    html {font-size: 18px;}
+}
+/* Fim - formatando os Media Query */
